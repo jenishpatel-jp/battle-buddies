@@ -1,4 +1,4 @@
-import BattleHistory from "../../components/battle-history/BattleHistory";
+import BattleHistory from "../../components/battleHistory/BattleHistory";
 
 export default function Home() {
   return (

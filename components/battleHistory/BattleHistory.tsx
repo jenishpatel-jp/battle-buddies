@@ -12,6 +12,6 @@ const BattleHistory = () => {
         </div>
     </div>
   )
-}
+};
 
 export default BattleHistory
