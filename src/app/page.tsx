@@ -5,7 +5,7 @@ export default function Home() {
     <div className="flex flex-col h-1/6 items-center justify-center bg-zinc-50 font-sans ">
       
       <main className="flex min-h-screen flex-col items-center justify-center py-32 px-16 bg-zinc sm:items-start w-full">
-        <h1 className="text-4xl w-full text-black justify-center items-center text-center p-5 m-5">Scoreboard!</h1>
+        <h1 className="text-4xl font-extrabold w-full text-black justify-center items-center text-center p-5 m-5">Scoreboard!</h1>
 
         <div className="flex flex-row items-center justify-center h-full w-full">
           <BattleHistory />
