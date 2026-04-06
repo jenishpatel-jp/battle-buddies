@@ -13,7 +13,7 @@ export default function Home() {
 
         <div className="flex items-center justify-center w-full max-w-4xl">
 
-          <Carousel className="w-full ">
+          <Carousel className="w-full">
             <CarouselContent >
               <CarouselItem className="flex items-center justify-center w-full">
                 <BattleHistory />
@@ -25,11 +25,12 @@ export default function Home() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
-          <Button size="icon-lg" className="absolute bottom-35 p-5 m-5 w-1/8 h-1/20 rounded-3xl bg-blue-300">
-            Play!
-          </Button>
+          
 
         </div>
+          <Button size="icon-lg" className=" p-5 m-5 w-1/8 h-1/20 rounded-3xl bg-blue-300">
+            Play!
+          </Button>
 
       </main>
       
