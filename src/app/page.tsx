@@ -13,7 +13,13 @@ export default function Home() {
 
         <div className="flex items-center justify-center w-full max-w-4xl">
 
-          <Carousel className="w-full">
+          <Carousel 
+            className="w-full"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            >
             <CarouselContent >
               <CarouselItem className="flex items-center justify-center w-full">
                 <BattleHistory />
