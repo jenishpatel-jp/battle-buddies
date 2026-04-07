@@ -28,7 +28,7 @@ export default function Home() {
           
 
         </div>
-          <Button size="icon-lg" className=" p-5 m-5 w-1/8 h-1/20 rounded-3xl bg-blue-300">
+          <Button size="icon-lg" className="p-5 m-5 w-1/8 h-1/20 rounded-3xl bg-blue-300">
             Play!
           </Button>
 
