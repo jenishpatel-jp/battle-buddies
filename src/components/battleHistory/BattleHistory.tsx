@@ -2,8 +2,8 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 const BattleHistory = () => {
   return (
-    <div className="flex flex-col p-4 m-4 w-full max-w-md">
-      <Card className="shadow-lg">
+   
+      <Card className="flex flex-col p-4 m-4 w-full max-w-md shadow-lg">
         <CardHeader>
           <CardTitle className="text-center text-4xl text-blue-500 font-semibold shadow-">Battle History</CardTitle>
         </CardHeader>
@@ -21,8 +21,7 @@ const BattleHistory = () => {
 
         </CardContent>
       </Card>
-
-    </div>
+  
   )
 };
 
