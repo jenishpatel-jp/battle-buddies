@@ -40,7 +40,7 @@ export default function Home() {
 
         </div>
 
-          <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+          <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onOpen={() => setIsModalOpen(true)}>
             <p>This is the modal content.</p>
           </Modal>
 
