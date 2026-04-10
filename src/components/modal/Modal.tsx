@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "../ui/button";
+import Dashboard from "./Dashboard";
 
 type ModalProps = {
     isOpen: boolean;
@@ -11,13 +12,16 @@ type ModalProps = {
 
 export default function Modal( { isOpen, onClose, onOpen, children }: ModalProps ) {
     if (!isOpen) return(
-        <Button 
-            size="icon-lg" 
-            className="p-5 m-5 w-1/8 h-1/20 rounded-3xl bg-blue-300"
-            onClick={onOpen}
-            >
-                Play!
-        </Button>
+        <div className="flex flex-col items-center justify-center ">
+            <Dashboard />
+            <Button 
+                size="icon-lg" 
+                className="p-5 m-5 w-1/8 h-1/20 rounded-3xl bg-blue-300"
+                onClick={onOpen}
+                >
+                    Play!
+            </Button>
+        </div>
     );
 
     return (
