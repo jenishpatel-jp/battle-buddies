@@ -8,7 +8,7 @@ import { useState } from "react";
 
 export default function Home() {
 
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="flex flex-col min-h-screen items-center justify-center bg-zinc-50 font-sans ">

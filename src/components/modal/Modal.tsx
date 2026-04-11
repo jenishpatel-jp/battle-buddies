@@ -1,5 +1,6 @@
 "use client";
 
+import SelectPlayers from "../newGame/SelectPlayers";
 import { Button } from "../ui/button";
 import Dashboard from "./Dashboard";
 
@@ -25,25 +26,6 @@ export default function Modal( { isOpen, onClose, onOpen, children }: ModalProps
     );
 
     return (
-        <div
-            className="flex items-center justify-center shadow-lg rounded-lg"
-            onClick={onClose} // close when clicking background
-        >
-
-            <div
-                className="bg-zinc-50 p-6 rounded-xl rounded-md"
-                onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
-            >
-            {children}
-
-                <button
-                onClick={onClose}
-                className="mt-4 px-4 py-2 bg-gray-200 rounded"
-                >
-                    Close
-                </button>
-
-            </div>
-        </div>
+        <SelectPlayers />
     )
 }
