@@ -8,14 +8,16 @@ import { useState } from "react";
 
 export default function Home() {
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isRacing, setIsRacing] = useState(false);
+  const [raceNumber, setRaceNumber] = useState(1); 
+
 
   return (
     <div className="flex flex-col min-h-screen items-center justify-center bg-zinc-50 font-sans ">
       
       <main className="flex flex-col items-center justify-center w-full py-16 px-6">
 
-          <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onOpen={() => setIsModalOpen(true)}>
+          <Modal isOpen={isRacing} onClose={() => setIsRacing(false)} onOpen={() => setIsRacing(true)}>
             <p>This is the modal content.</p>
           </Modal>
 
