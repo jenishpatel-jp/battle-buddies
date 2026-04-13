@@ -16,6 +16,10 @@ const NumberOfRaces = () => {
                 <Button className="p-3 m-3 w-1/3 h-1/5 bg-blue-300 text-xl">24</Button>
                 <Button className="p-3 m-3 w-1/3 h-1/5 bg-blue-300 text-xl">32</Button>
             </CardContent>
+            <div className=" flex flex-row items-center justify-center ">
+                    <Button className="p-3 m-3 w-1/3 h-1/5 bg-blue-300 text-xl">Back</Button>
+                    <Button className="p-3 m-3 w-1/3 h-1/5 bg-blue-300 text-xl">Next</Button>
+            </div>
 
         </Card>
     )
