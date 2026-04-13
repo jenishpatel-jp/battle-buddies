@@ -1,17 +1,22 @@
 "use client";
 
+import NumberOfRaces from "../newGame/NumberOfRaces";
 import SelectPlayers from "../newGame/SelectPlayers";
 import { Button } from "../ui/button";
 import Dashboard from "./Dashboard";
+import { useState } from "react";
 
 type ModalProps = {
     isOpen: boolean;
     onClose: () => void;
     onOpen: () => void;
     children: React.ReactNode;
-};
+}
 
 export default function Modal( { isOpen, onClose, onOpen, children }: ModalProps ) {
+
+    const [step, setStep] = useState(1);  
+
     if (!isOpen) return(
         <div className="flex flex-col items-center justify-center ">
             <Dashboard />
@@ -25,7 +30,14 @@ export default function Modal( { isOpen, onClose, onOpen, children }: ModalProps
         </div>
     );
 
-    return (
-        <SelectPlayers />
-    )
+    switch(step){
+        case 0:
+            return (
+                <SelectPlayers />
+            )
+        case 1:
+            return(
+                <NumberOfRaces />
+            )
+    }
 }
