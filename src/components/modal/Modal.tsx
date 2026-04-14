@@ -11,14 +11,22 @@ type ModalProps = {
     onClose: () => void;
     onOpen: () => void;
     children: React.ReactNode;
+
 }
 
-export default function Modal( { isOpen, onClose, onOpen, children }: ModalProps ) {
+export default function Modal( { 
+    isOpen, 
+    onClose, 
+    onOpen, 
+    children,
+
+}: ModalProps ) {
 
     const [selectingPlayers, setSelectingPlayers] = useState(false);
     const [selectingRaces, setSelectingRaces] = useState(false);
     const [raceNumber, setRaceNumber] = useState(1);
 
+    
     if (!isOpen) return(
         <div className="flex flex-col items-center justify-center ">
             <Dashboard />
@@ -32,7 +40,17 @@ export default function Modal( { isOpen, onClose, onOpen, children }: ModalProps
         </div>
     );
 
-    
+    if(selectingPlayers){
+        return (
+            <SelectPlayers />
+        )
+    };
+
+    if(selectingRaces){
+        return (
+            <NumberOfRaces />
+        )
+    }
 
     switch(raceNumber){
         case 0:
