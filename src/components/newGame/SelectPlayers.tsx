@@ -3,7 +3,13 @@ import { Button } from "../ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
 import { Check } from "lucide-react"
 
-const SelectPlayers = () => {
+type selectPlayersProps = {
+    setSelectingPlayers: React.Dispatch<React.SetStateAction<boolean>>;
+    setSelectingRaces: React.Dispatch<React.SetStateAction<boolean>>;
+
+};
+
+const SelectPlayers = ( { setSelectingPlayers, setSelectingRaces }: selectPlayersProps ) => {
 
     return (
         <Card className="flex flex-col p-4 m-4 w-full max-w-md shadow-lg">

@@ -2,7 +2,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
 import { Button } from "../ui/button"
 import Link from "next/link"
 
-const NumberOfRaces = () => {
+type ModalProps = {
+    setSelectingRaces: React.Dispatch<React.SetStateAction<boolean>>;
+    setRaceNumber: React.Dispatch<React.SetStateAction<number>>;
+}
+
+const NumberOfRaces = ( { setSelectingRaces, setRaceNumber }: ModalProps ) => {
     return (
         <Card className="flex flex-col p-4 m-4 w-full max-w-md shadow-lg">
             <CardHeader >

@@ -42,24 +42,30 @@ export default function Modal( {
 
     if(selectingPlayers){
         return (
-            <SelectPlayers />
+            <SelectPlayers 
+                setSelectingPlayers={setSelectingPlayers} 
+                setSelectingRaces={setSelectingRaces}    
+            />
         )
     };
 
     if(selectingRaces){
         return (
-            <NumberOfRaces />
+            <NumberOfRaces 
+                setSelectingRaces={setSelectingRaces} 
+                setRaceNumber={setRaceNumber}    
+            />
         )
     }
 
     switch(raceNumber){
         case 0:
             return (
-                <SelectPlayers />
+               <div></div>
             )
         case 1:
             return(
-                <NumberOfRaces />
+                <div></div>
             )
     }
 }
