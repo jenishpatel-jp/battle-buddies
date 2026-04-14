@@ -16,10 +16,7 @@ type ModalProps = {
 
 export default function Modal( { 
     isOpen, 
-    onClose, 
     onOpen, 
-    children,
-
 }: ModalProps ) {
 
     const [selectingPlayers, setSelectingPlayers] = useState(false);
@@ -33,7 +30,10 @@ export default function Modal( {
             <Button 
                 size="icon-lg" 
                 className="p-5 m-5 w-1/8 h-1/20 rounded-3xl bg-blue-300"
-                onClick={onOpen}
+                onClick={() => {
+                    onOpen();
+                    setSelectingPlayers(true);
+                }}
                 >
                     Play!
             </Button>
