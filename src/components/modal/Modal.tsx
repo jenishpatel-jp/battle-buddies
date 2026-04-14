@@ -15,7 +15,9 @@ type ModalProps = {
 
 export default function Modal( { isOpen, onClose, onOpen, children }: ModalProps ) {
 
-    const [step, setStep] = useState(1);  
+    const [selectingPlayers, setSelectingPlayers] = useState(false);
+    const [selectingRaces, setSelectingRaces] = useState(false);
+    const [raceNumber, setRaceNumber] = useState(1);
 
     if (!isOpen) return(
         <div className="flex flex-col items-center justify-center ">
@@ -30,7 +32,9 @@ export default function Modal( { isOpen, onClose, onOpen, children }: ModalProps
         </div>
     );
 
-    switch(step){
+    
+
+    switch(raceNumber){
         case 0:
             return (
                 <SelectPlayers />
