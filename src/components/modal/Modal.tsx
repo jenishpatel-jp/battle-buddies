@@ -2,6 +2,7 @@
 
 import NumberOfRaces from "../newGame/NumberOfRaces";
 import SelectPlayers from "../newGame/SelectPlayers";
+import SelectWinner from "../newGame/SelectWinner";
 import { Button } from "../ui/button";
 import Dashboard from "./Dashboard";
 import { useState } from "react";
@@ -58,14 +59,9 @@ export default function Modal( {
         )
     }
 
-    switch(raceNumber){
-        case 0:
-            return (
-               <div></div>
-            )
-        case 1:
-            return(
-                <div></div>
-            )
+    if(raceNumber){
+        return (
+            <SelectWinner />
+        )
     }
 }
