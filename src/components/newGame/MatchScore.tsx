@@ -1,4 +1,4 @@
-import { Card, CardTitle, CardDescription, CardHeader, CardContent } from "../ui/card"
+import { Card, CardTitle, CardHeader, CardContent } from "../ui/card"
 
 const MatchScore = () => {
 
